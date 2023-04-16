@@ -1,6 +1,31 @@
 # AWS Deepracer School
 
-Welcome to our Autonomous Car Course featuring AWS DeepRacer! 
+<video id="videoPlayer" controls width="800" style="max-width: 100%;">
+    <source src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/video.mp4" type="video/mp4">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/English.vtt" srclang="en" label="English">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/한국어.vtt" srclang="ko" label="한국어">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/de.vtt" srclang="de" label="Deutsch">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/Español.vtt" srclang="es" label="Español">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/Français.vtt" srclang="fr" label="Français">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/Bahasa Indonesia.vtt" srclang="id" label="Bahasa Indonesia">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/Italiano.vtt" srclang="it" label="Italiano">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/日本語.vtt" srclang="ja" label="日本語">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/Nederlands.vtt" srclang="nl" label="Nederlands">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/Polski.vtt" srclang="pl" label="Polski">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/Português.vtt" srclang="pt" label="Português">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/Русский.vtt" srclang="ru" label="Русский">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/ภาษาไทย.vtt" srclang="th" label="ภาษาไทย">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/Türkçe.vtt" srclang="tr" label="Türkçe">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/Tiếng Việt.vtt" srclang="vi" label="Tiếng Việt">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/简体中文 (中国).vtt" srclang="zh-CN" label="简体中文 (中国)">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/繁體中文 (台灣).vtt" srclang="zh-TW" label="繁體中文 (台灣)">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/繁體中文 (香港).vtt" srclang="zh-HK" label="繁體中文 (香港)">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/हिन्दी.vtt" srclang="hi" label="हिन्दी">
+    <track kind="captions" src="https://aws-deepracer-school.s3.amazonaws.com/data/en/기타/intro/vtt/العربية.vtt" srclang="ar" label="العربية">
+<video id="videoPlayer" controls width="480">
+
+
+**Welcome to our Autonomous Car Course featuring AWS DeepRacer!** 
 
 Embark on an exciting journey into the world of artificial intelligence (AI), reinforcement learning, and self-driving technology with this comprehensive and engaging course.
 
