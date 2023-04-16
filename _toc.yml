@@ -11,13 +11,80 @@ parts:
   - caption: Contents
     chapters:
 
-    # 인공지능 기초
+    # section 01
     - file: contents/s01-u01
       sections:
       - file: contents/s01-u02
-      # - file: contents/인공지능_기초/02_기계는_어떻게_학습할까
-      # - file: contents/인공지능_기초/03_신경망과_딥러닝
-      # - file: contents/인공지능_기초/04_인공지능_기술동향
+      - file: contents/s01-u03
+      - file: contents/s01-u04
+      - file: contents/s01-u05
+      - file: contents/s01-u06
+      - file: contents/s01-u07
+      - file: contents/s01-u08
+
+    # section 02
+    - file: contents/s02-u01
+      sections:
+      - file: contents/s02-u02
+      - file: contents/s02-u03
+      - file: contents/s02-u04
+      - file: contents/s02-u05
+      - file: contents/s02-u06
+
+    # section 03
+    - file: contents/s03-u01
+      sections:
+      - file: contents/s03-u02
+      - file: contents/s03-u03
+      - file: contents/s03-u04
+      - file: contents/s03-u05
+      - file: contents/s03-u06
+      - file: contents/s03-u07
+
+    # section 04
+    - file: contents/s04-u01
+      sections:
+      - file: contents/s04-u02
+      - file: contents/s04-u03
+      - file: contents/s04-u04
+      - file: contents/s04-u05
+      - file: contents/s04-u06
+
+    # section 05
+    - file: contents/s05-u01
+      sections:
+      - file: contents/s05-u02
+      - file: contents/s05-u03
+      - file: contents/s05-u04
+      - file: contents/s05-u05
+      - file: contents/s05-u06
+      - file: contents/s05-u07
+
+    # section 06
+    - file: contents/s06-u01
+      sections:
+      - file: contents/s06-u02
+      - file: contents/s06-u03
+      - file: contents/s06-u04
+      - file: contents/s06-u05
+      - file: contents/s06-u06
+      - file: contents/s06-u07
+      - file: contents/s06-u08
+
+    # section 07
+    - file: contents/s07-u01
+      sections:
+      - file: contents/s07-u02
+      - file: contents/s07-u03
+      - file: contents/s07-u04
+      - file: contents/s07-u05
+      - file: contents/s07-u06
+      - file: contents/s07-u07
+      - file: contents/s07-u08
+      - file: contents/s07-u09
+      - file: contents/s07-u10
+      - file: contents/s07-u11
+
 
   #   # 머신러닝
   #   - file: contents/머신러닝/00_개요
