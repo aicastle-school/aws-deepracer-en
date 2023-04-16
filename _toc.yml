@@ -8,13 +8,13 @@ parts:
     - file: About_AI_Castle
 
   # ###################
-  - caption: AWS DeepRacer
+  - caption: Contents
     chapters:
 
     # 인공지능 기초
-    - file: contents/s01/u01/page
+    - file: contents/s01-u01
       sections:
-      - file: chapters/s01-u02
+      - file: contents/s01-u02
       # - file: contents/인공지능_기초/02_기계는_어떻게_학습할까
       # - file: contents/인공지능_기초/03_신경망과_딥러닝
       # - file: contents/인공지능_기초/04_인공지능_기술동향
