@@ -13,7 +13,7 @@ Contact
 - https://www.ai-castle.com
   
 
-![](aicastle-logo.jpg)
+![](aicastle-logo.png)
 
 
 Check out the content pages bundled with this sample book to see more.
