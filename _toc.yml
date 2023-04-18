@@ -123,6 +123,12 @@ parts:
       - file: contents/s11-u07
       - file: contents/s11-u08
 
+  - caption: Resources
+    chapters:
+    - url: https://ai-castle.github.io/aws-deepracer-school-ko/intro.html
+      title: AWS DeepRacer School (Korean)
+    - url: https://ai-castle.com
+      title: AI Castle
 
 
   # - caption: PROGRAMMING LANGUAGE
