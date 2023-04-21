@@ -837,9 +837,11 @@ title="Print to PDF"
 </div><hr class="docutils" />
 <h3 style="display: flex; justify-content: space-between; align-items: center;">
     Video
+    <span style="font-size: 0.7em;">
+        <a href="../premium/01.html" target="_blank" title="This video can only be viewed by accounts registered in the premium course">🚀 Premium Course </a> 
+    </span>
     <span style="font-size: 0.6em;">
-        <a title="English, Deutsch, Español, Français, Bahasa Indonesia, Italiano, 日本語, 한국어, Nederlands, Polski, Português, Русский, ภาษาไทย,Türkçe,Tiếng Việt, 简体中文, 繁體中文, हिन्दी, العربية">🌐 subtitles in 20 languages</a> |
-        <a href="../premium/01.html" target="_blank" title="This video can only be viewed by accounts registered in the premium course">🚀 Premium Course </a> |
+        <a title="English, Deutsch, Español, Français, Bahasa Indonesia, Italiano, 日本語, 한국어, Nederlands, Polski, Português, Русский, ภาษาไทย,Türkçe,Tiếng Việt, 简体中文, 繁體中文, हिन्दी, العربية"><i class="fa fa-info-circle"></i> subtitles in 20 languages</a> |
         <a href="" target="_blank">🔗 Link </a>
     </span>
 </h3><div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
@@ -850,7 +852,58 @@ title="Print to PDF"
     allowfullscreen="allowfullscreen" 
     allow="fullscreen">
   </iframe>
-</div><div class="toctree-wrapper compound">
+</div><!-- Replace "test" with your own sandbox Business account app client ID -->
+<script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+<!-- Set up a container element for the button -->
+<div id="paypal-button-container"></div>
+<script>
+  paypal.Buttons({
+    // Order is created on the server and the order id is returned
+    createOrder() {
+      return fetch("/my-server/create-paypal-order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        // use the "body" param to optionally pass additional order information
+        // like product skus and quantities
+        body: JSON.stringify({
+          cart: [
+            {
+              sku: "YOUR_PRODUCT_STOCK_KEEPING_UNIT",
+              quantity: "YOUR_PRODUCT_QUANTITY",
+            },
+          ],
+        }),
+      })
+      .then((response) => response.json())
+      .then((order) => order.id);
+    },
+    // Finalize the transaction on the server after payer approval
+    onApprove(data) {
+      return fetch("/my-server/capture-paypal-order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          orderID: data.orderID
+        })
+      })
+      .then((response) => response.json())
+      .then((orderData) => {
+        // Successful capture! For dev/demo purposes:
+        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+        const transaction = orderData.purchase_units[0].payments.captures[0];
+        alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+        // When ready to go live, remove the alert and show a success message within this page. For example:
+        // const element = document.getElementById('paypal-button-container');
+        // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+        // Or go to another URL:  window.location.href = 'thank_you.html';
+      });
+    }
+  }).render('#paypal-button-container');
+</script><div class="toctree-wrapper compound">
 </div>
 </section>
 
