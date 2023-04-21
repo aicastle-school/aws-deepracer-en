@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Join the Premium Course &#8212; AWS DeepRacer School (English)</title>
+    <title>Pricing &#8212; AWS DeepRacer School (English)</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -89,7 +89,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="What is AWS DeepRacer" href="../contents/s01-u01.html" />
-    <link rel="prev" title="Join the Premium Course" href="02.html" />
+    <link rel="prev" title="PayPal" href="02.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -162,12 +162,12 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="02.html">
-     Join the Premium Course
+     PayPal
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Join the Premium Course
+     Pricing
     </a>
    </li>
   </ul>
@@ -805,7 +805,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Join the Premium Course</h1>
+                <h1>Pricing</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -817,9 +817,37 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="join-the-premium-course">
-<h1>Join the Premium Course<a class="headerlink" href="#join-the-premium-course" title="Permalink to this headline">#</a></h1>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="pricing">
+<h1>Pricing<a class="headerlink" href="#pricing" title="Permalink to this headline">#</a></h1>
+<h1>온라인 강의 판매금액 계산</h1>
+<form id="price-form">
+    <label for="students">학생 수:</label>
+    <input type="number" id="students" name="students" min="1" required>
+    <button type="submit">금액 계산</button>
+</form>
+<p id="result"></p>
+<script>
+    document.getElementById("price-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const numberOfStudents = parseInt(document.getElementById("students").value, 10);
+        const pricePerStudent = 20;
+        let discount = 0;
+
+        if (numberOfStudents >= 200) {
+            discount = 0.7;
+        } else if (numberOfStudents >= 100) {
+            discount = 0.5;
+        } else if (numberOfStudents >= 50) {
+            discount = 0.3;
+        } else if (numberOfStudents >= 10) {
+            discount = 0.1;
+        }
+
+        const totalPrice = numberOfStudents * pricePerStudent * (1 - discount);
+        document.getElementById("result").innerText = `전체 판매금액: $${totalPrice.toFixed(2)}`;
+    });
+</script></section>
 
     <script type="text/x-thebe-config">
     {
@@ -852,7 +880,7 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Join the Premium Course</p>
+            <p class="prev-next-title">PayPal</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../contents/s01-u01.html" title="next page">

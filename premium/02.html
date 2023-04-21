@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Join the Premium Course &#8212; AWS DeepRacer School (English)</title>
+    <title>PayPal &#8212; AWS DeepRacer School (English)</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -88,7 +88,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Join the Premium Course" href="03.html" />
+    <link rel="next" title="Pricing" href="03.html" />
     <link rel="prev" title="Join the Premium Course 🚀" href="01.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -162,12 +162,12 @@ const thebe_selector_output = ".output, .cell_output"
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Join the Premium Course
+     PayPal
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="03.html">
-     Join the Premium Course
+     Pricing
     </a>
    </li>
   </ul>
@@ -805,7 +805,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Join the Premium Course</h1>
+                <h1>PayPal</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -817,9 +817,60 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="join-the-premium-course">
-<h1>Join the Premium Course<a class="headerlink" href="#join-the-premium-course" title="Permalink to this headline">#</a></h1>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="paypal">
+<h1>PayPal<a class="headerlink" href="#paypal" title="Permalink to this headline">#</a></h1>
+<!-- Replace "test" with your own sandbox Business account app client ID -->
+<script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+<!-- Set up a container element for the button -->
+<div id="paypal-button-container"></div>
+<script>
+  paypal.Buttons({
+    // Order is created on the server and the order id is returned
+    createOrder() {
+      return fetch("/my-server/create-paypal-order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        // use the "body" param to optionally pass additional order information
+        // like product skus and quantities
+        body: JSON.stringify({
+          cart: [
+            {
+              sku: "YOUR_PRODUCT_STOCK_KEEPING_UNIT",
+              quantity: "YOUR_PRODUCT_QUANTITY",
+            },
+          ],
+        }),
+      })
+      .then((response) => response.json())
+      .then((order) => order.id);
+    },
+    // Finalize the transaction on the server after payer approval
+    onApprove(data) {
+      return fetch("/my-server/capture-paypal-order", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          orderID: data.orderID
+        })
+      })
+      .then((response) => response.json())
+      .then((orderData) => {
+        // Successful capture! For dev/demo purposes:
+        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+        const transaction = orderData.purchase_units[0].payments.captures[0];
+        alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+        // When ready to go live, remove the alert and show a success message within this page. For example:
+        // const element = document.getElementById('paypal-button-container');
+        // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+        // Or go to another URL:  window.location.href = 'thank_you.html';
+      });
+    }
+  }).render('#paypal-button-container');
+</script></section>
 
     <script type="text/x-thebe-config">
     {
@@ -858,7 +909,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="03.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Join the Premium Course</p>
+        <p class="prev-next-title">Pricing</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
