@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>File API Example</title>
+  </head>
+  <body>
+    <input type="file" id="fileInput">
+    <script>
+      const fileInput = document.getElementById('fileInput');
+
+      fileInput.addEventListener('change', (event) => {
+        const selectedFile = event.target.files[0];
+        console.log(selectedFile.name);
+        console.log(selectedFile.size);
+        console.log(selectedFile.type);
+      });
+    </script>
+  </body>
+</html>
