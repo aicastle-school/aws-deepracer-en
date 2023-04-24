@@ -821,18 +821,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#premium">
-   Premium 요금
+  <a class="reference internal nav-link" href="#premium-pricing">
+   Premium Pricing
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   요금 할인
+  <a class="reference internal nav-link" href="#fee-discounts">
+   Fee Discounts
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   요금 계산기
+  <a class="reference internal nav-link" href="#pricing-calculator">
+   Pricing Calculator
   </a>
  </li>
 </ul>
@@ -855,18 +855,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#premium">
-   Premium 요금
+  <a class="reference internal nav-link" href="#premium-pricing">
+   Premium Pricing
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   요금 할인
+  <a class="reference internal nav-link" href="#fee-discounts">
+   Fee Discounts
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id2">
-   요금 계산기
+  <a class="reference internal nav-link" href="#pricing-calculator">
+   Pricing Calculator
   </a>
  </li>
 </ul>
@@ -881,60 +881,51 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="pricing">
 <h1>Pricing<a class="headerlink" href="#pricing" title="Permalink to this headline">#</a></h1>
-<section id="premium">
-<h2>Premium 요금<a class="headerlink" href="#premium" title="Permalink to this headline">#</a></h2>
+<section id="premium-pricing">
+<h2>Premium Pricing<a class="headerlink" href="#premium-pricing" title="Permalink to this headline">#</a></h2>
 <h1> <b>$15</b> </h1>
 <ul>
-<li><p><strong>매월 멤버 1인당 $15</strong></p></li>
-<li><p>PPT 무제한 보기</p></li>
-<li><p>모든 동영상 강의 무제한 스트리밍</p></li>
-<li><p>20개 언어 자막 지원</p>
+<li><p><strong>$15 per member per month</strong></p></li>
+<li><p>Unlimited access to PPTs</p></li>
+<li><p>Unlimited streaming of all video lectures</p></li>
+<li><p>Subtitles available in 20 languages:</p>
 <blockquote>
 <div><p>English, Deutsch, Español, Français, Bahasa Indonesia, Italiano, 日本語, 한국어, Nederlands, Polski, Português, Русский, ภาษาไทย,Türkçe,Tiếng Việt, 简体中文, 繁體中文, हिन्दी, العربية</p>
 </div></blockquote>
 </li>
-<li><p>Q&amp;A : 동영상에 댓글달기를 통해 질문하고 답변 받기 가능.</p></li>
+<li><p>Q&amp;A: Ask and receive answers by commenting on the video.</p></li>
 </ul>
 </section>
 <hr class="docutils" />
-<section id="id1">
-<h2>요금 할인<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<section id="fee-discounts">
+<h2>Fee Discounts<a class="headerlink" href="#fee-discounts" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>기간에 따른 추가 할인 : 세달 이상 시 25% 할인</p></li>
-<li><p>멤버 수에 따른 추가 할인</p>
-<ul>
-<li><p>50명 이상 : 10% 추가 할인</p></li>
-<li><p>100명 이상 : 20% 추가 할인</p></li>
-<li><p>200명 이상 : 30% 추가 할인</p></li>
-</ul>
-</li>
+<li><p>Duration Discount: Additional 25% discount for more than 3 months</p></li>
+<li><p>Number of Members Discount: Additional 10% discount for 100 or more members, and 20% discount for 200 or more members</p></li>
 </ul>
 </section>
 <hr class="docutils" />
-<section id="id2">
-<h2>요금 계산기<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<section id="pricing-calculator">
+<h2>Pricing Calculator<a class="headerlink" href="#pricing-calculator" title="Permalink to this headline">#</a></h2>
 <div class="form-group">
-    <label for="numStudents">멤버 수:</label>
+    <label for="numStudents">Number of Members:</label>
     <input type="number" id="numStudents" name="numStudents" oninput="calculatePrice()" value="1">
 </div>
 <div class="form-group">
-    <label for="numMonths">기간 (월):</label>
+    <label for="numMonths">Duration (Months):</label>
     <input type="number" id="numMonths" name="numMonths" oninput="calculatePrice()" value="1">
 </div>
-<b> <p id="result">전체 요금: $15 (할인율: 0%)</p></b>
-<p> 부가세는 제외 된 금액입니다. </p>
+<b> <p id="result">Total Price: $15 (Discount Rate: 0%)</p></b>
+<p>Price does not include VAT.</p>
 <script>
     function calculatePrice() {
-        // 입력값 가져오기
+        // Get input values
         var numStudents = parseInt(document.getElementById("numStudents").value);
         var numMonths = parseInt(document.getElementById("numMonths").value);
-        // 할인 계산
+        // Calculate discounts
         var discountRate = 0;
         if (numMonths >= 3) {
             discountRate += 0.25;
-        }
-        if (numStudents >= 50) {
-            discountRate += 0.1;
         }
         if (numStudents >= 100) {
             discountRate += 0.1;
@@ -942,12 +933,12 @@ title="Print to PDF"
         if (numStudents >= 200) {
             discountRate += 0.1;
         }
-        // 요금 계산
+        // Calculate pricing
         var basePrice = numStudents * 15 * numMonths;
         var discountAmount = basePrice * discountRate;
         var totalPrice = basePrice - discountAmount;
-        // 결과 출력
-        var result = "전체 요금: $" + totalPrice.toFixed(2) + " (할인율: " + (discountRate * 100).toFixed(0) + "%)";
+        // Print results
+        var result = "Total Price: $" + totalPrice.toFixed(2) + " (Discount Rate: " + (discountRate * 100).toFixed(0) + "%)";
         document.getElementById("result").innerHTML = result;
     }
 </script></section>
