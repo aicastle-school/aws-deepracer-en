@@ -139,7 +139,7 @@ parts:
 
   - caption: Resources
     chapters:
-    - url: https://ai-castle.github.io/aws-deepracer-school-ko/index.html
+    - url: https://deepracer-school-ko.ai-castle.com
       title: Korean (한국어)
     - url: https://ai-castle.com
       title: AI Castle
